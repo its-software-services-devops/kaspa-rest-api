@@ -1,6 +1,6 @@
 namespace Its.Kaspa.Api.Services;
 
-public interface INetworkService
+public interface IInfoService
 {
     public Task<GetCurrentNetworkResponseMessage> GetCurrentNetwork();
 }

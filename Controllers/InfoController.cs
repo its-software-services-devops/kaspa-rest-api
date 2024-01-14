@@ -5,11 +5,11 @@ namespace Its.Kaspa.Api.Controllers;
 
 [ApiController]
 [Route("/api/[controller]")]
-public class NetworkController : ControllerBase
+public class InfoController : ControllerBase
 {
-    private readonly INetworkService svc;
+    private readonly IInfoService svc;
 
-    public NetworkController(INetworkService service)
+    public InfoController(IInfoService service)
     {
         svc = service;
     }

@@ -3,11 +3,11 @@ using Its.Kaspa.Api.Cores;
 
 namespace Its.Kaspa.Api.Services;
 
-public class NetworkService : INetworkService
+public class InfoService : IInfoService
 {
     private readonly IClient rpcClient;
 
-    public NetworkService(IClient client) 
+    public InfoService(IClient client) 
     {
         rpcClient = client;
     }
