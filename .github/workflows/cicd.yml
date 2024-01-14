@@ -39,8 +39,8 @@ jobs:
       with:
         credentials_json: '${{ secrets.GCR_KEY }}'
 
-    #- name: Test with the dotnet CLI
-    #  run: dotnet test carpark-api.test
+    - name: Test with the dotnet CLI
+      run: dotnet test kaspa-api.test
 
     - name: Slack notification end
       if: always()
