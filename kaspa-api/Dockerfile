@@ -14,8 +14,9 @@ WORKDIR /source
 COPY kaspa-api/* ./kaspa-api/
 COPY kaspa-rest-api.sln .
 
-RUN dotnet restore kaspa-api/kaspa-rest-api.csproj
-RUN dotnet publish kaspa-api/kaspa-rest-api.csproj -c release -o /app --no-restore -p:PackageVersion=${version}
+RUN cd kaspa-api
+RUN dotnet restore kaspa-rest-api.csproj
+RUN dotnet publish kaspa-rest-api.csproj -c release -o /app --no-restore -p:PackageVersion=${version}
 
 ##### final stage/image
 FROM mcr.microsoft.com/dotnet/aspnet:7.0
