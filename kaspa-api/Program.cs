@@ -7,7 +7,7 @@ builder.Services.AddControllers()
     .AddJsonOptions(options => options.JsonSerializerOptions.WriteIndented = true);
 
 builder.Services.AddScoped<IClient, KaspadClient>();
-builder.Services.AddScoped<INetworkService, NetworkService>();
+builder.Services.AddScoped<IInfoService, InfoService>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
