@@ -21,4 +21,28 @@ public class InfoController : ControllerBase
         var t = svc.GetCurrentNetwork();
         return Ok(t.Result);
     }
+
+    [HttpGet]
+    [Route("action/GetInfo")]
+    public IActionResult GetInfo()
+    {
+        var t = svc.GetInfo();
+        return Ok(t.Result);
+    }
+
+    [HttpGet]
+    [Route("action/GetCoinSupply")]
+    public IActionResult GetCoinSupply()
+    {
+        var t = svc.GetCoinSupply();
+        return Ok(t.Result);
+    }
+
+    [HttpGet]
+    [Route("action/GetBlockDagInfo")]
+    public IActionResult GetBlockDagInfo()
+    {
+        var t = svc.GetBlockDagInfo();
+        return Ok(t.Result);
+    }
 }
