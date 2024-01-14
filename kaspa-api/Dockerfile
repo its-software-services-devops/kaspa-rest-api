@@ -12,7 +12,7 @@ WORKDIR /source
 
 RUN pwd; ls -lrt;
 # copy csproj and restore as distinct layers
-COPY kaspa-api/*/* ./kaspa-api/
+COPY kaspa-api/ ./kaspa-api/
 COPY kaspa-rest-api.sln .
 
 RUN cd kaspa-api; pwd; ls -lrt; 
