@@ -10,6 +10,7 @@ RUN apt-get -y update \
 
 WORKDIR /source
 
+RUN pwd;
 # copy csproj and restore as distinct layers
 COPY kaspa-api/* ./kaspa-api/
 COPY kaspa-rest-api.sln .
