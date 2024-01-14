@@ -117,7 +117,7 @@ jobs:
       id: prep
       run: |
         DOCKER_IMAGE=promid/${{matrix.service}}
-        GCR_IMAGE=asia-southeast1-docker.pkg.dev/promrub-personal-use/promjodd/${{matrix.service}}
+        GCR_IMAGE=asia-southeast1-docker.pkg.dev/its-artifact-commons/kaspa/${{matrix.service}}
         VERSION=latest
         GIT_HASH=$(git rev-parse --short "$GITHUB_SHA")
         ENV=dev
