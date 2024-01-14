@@ -14,7 +14,7 @@ WORKDIR /source
 COPY kaspa-api/* ./kaspa-api/
 COPY kaspa-rest-api.sln .
 
-RUN pwd; ls -lrt; cd kaspa-api
+RUN cd kaspa-api; pwd; ls -lrt; 
 RUN dotnet restore kaspa-rest-api.csproj
 RUN dotnet publish kaspa-rest-api.csproj -c release -o /app --no-restore -p:PackageVersion=${version}
 
