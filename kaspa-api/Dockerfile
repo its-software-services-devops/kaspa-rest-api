@@ -10,12 +10,10 @@ RUN apt-get -y update \
 
 WORKDIR /source
 
-#RUN pwd; ls -lrt;
 # copy csproj and restore as distinct layers
 COPY kaspa-api/ ./kaspa-api/
 COPY kaspa-rest-api.sln .
 
-#RUN cd kaspa-api; pwd; ls -lrt; 
 RUN dotnet restore kaspa-api/kaspa-rest-api.csproj
 RUN dotnet publish kaspa-api/kaspa-rest-api.csproj -c release -o /app --no-restore -p:PackageVersion=${version}
 
