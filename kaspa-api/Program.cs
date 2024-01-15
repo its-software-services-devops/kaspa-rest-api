@@ -8,6 +8,7 @@ builder.Services.AddControllers()
 
 builder.Services.AddScoped<IClient, KaspadClient>();
 builder.Services.AddScoped<IInfoService, InfoService>();
+builder.Services.AddScoped<IAddressService, AddressService>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
